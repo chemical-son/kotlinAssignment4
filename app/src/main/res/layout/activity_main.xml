@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <EditText
+                android:id="@+id/et_v"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:hint="Enter the cost"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tx_v"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="How was the services?"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="7dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="7dp">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/amazing"
+                    android:layout_margin="7dp"
+                    android:text="Amazing(20%)"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/good"
+                    android:text="Good(18%)"
+                    android:layout_margin="7dp"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ok"
+                    android:text="OK(15%)"
+                    android:layout_margin="7dp"/>
+            </RadioGroup>
+
+            <Switch
+                android:id="@+id/switch_bt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="7dp"
+                android:hint="Round up tip?"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:textAllCaps="false"
+                android:id="@+id/calculate_bt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="7dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/tx_v_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="tip amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="7dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <Button
+                android:id="@+id/go_to_modifyed_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to next layout"
+                android:textAllCaps="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right"/>
+            <Button
+                android:id="@+id/go_to_happy_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to Happy Meal"
+                android:textAllCaps="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

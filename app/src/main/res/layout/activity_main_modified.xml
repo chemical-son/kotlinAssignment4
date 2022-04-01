@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    style="@style/Theme.AppCompat.NoActionBar"
+    android:background="#BDE2CF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            android:background="#90FFFFFF">
+
+            <EditText
+                android:id="@+id/et_v_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:hint="Enter the cost"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="#009688"
+                android:background="@color/white"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/tx_v_m"
+                android:textColor="@color/white"
+                android:background="#009688"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How was the services?"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="7dp" />
+            <RadioGroup
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="7dp">
+
+                <RadioButton
+                    android:id="@+id/amazing_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:text="Amazing(20%)"
+                    android:padding="7dp"/>
+                <RadioButton
+                    android:id="@+id/good_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Good(18%)"
+                    android:layout_margin="7dp"
+                    android:padding="7dp"/>
+                <RadioButton
+                    android:id="@+id/ok_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OK(15%)"
+                    android:layout_margin="7dp"
+                    android:padding="7dp"/>
+            </RadioGroup>
+
+            <Switch
+                android:id="@+id/switch_bt_m"
+                android:padding="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="7dp"
+                android:text="Round up tip?"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                android:background="#009688"
+                android:textColor="@color/white"/>
+            <Button
+                android:id="@+id/calculate_bt_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="7dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                style="@style/MaterialAlertDialog.Material3"
+                android:backgroundTint="#009688"/>
+
+            <TextView
+                android:id="@+id/tx_v_tip_m"
+                android:textColor="#009688"
+                android:padding="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="tip amount"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="7dp" />
+
+
+            <Button
+                android:id="@+id/back_to_main_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to main layout"
+                android:textAllCaps="false"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="right"
+                style="@style/MaterialAlertDialog.Material3"
+                android:backgroundTint="#009688"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
